@@ -6,6 +6,26 @@
 <title>Digital Marketing Course in Bandra (West) for Business Owners | One-to-One | Compufield</title>
 <meta name="description" content="Digital marketing classes in Bandra (West) for business owners. One-to-one training at our Bandra (West) centre near Mehboob Studio. No group batches. Learn Instagram, Facebook, Google Ads, SEO and AI on your own business. Book a free demo.">
 <meta name="keywords" content="digital marketing course bandra west, digital marketing classes bandra, digital marketing for business owners, one to one digital marketing training, social media marketing course bandra, digital marketing course khar, digital marketing course santacruz, digital marketing course near bandra, free demo digital marketing mumbai">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Compufield">
+<meta property="og:title" content="One-to-One Digital Marketing Classes in Bandra (West) for Business Owners | Book a FREE Demo">
+<meta property="og:description" content="No group batches. Learn Instagram, Facebook, Google Ads, Google Maps and WhatsApp marketing one-to-one, on your own business, at our Bandra (West) centre near Mehboob Studio.">
+<meta property="og:image" content="https://compufield.com/images/education/header-logo.png">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary">
+<meta name="geo.region" content="IN-MH">
+<meta name="geo.placename" content="Bandra (West), Mumbai">
+<meta name="theme-color" content="#0a1230">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Compufield Computer Institute – Bandra (West)",
+"url":"https://compufield.com/","logo":"https://compufield.com/images/education/header-logo.png","telephone":"+91-98333-61338","email":"faiyaz@compufield.com",
+"foundingDate":"1985",
+"address":{"@type":"PostalAddress","streetAddress":"O Priya Building, 1st Floor, Block 6, Dr. Peter Dias Road, Near Mehboob Studio","addressLocality":"Bandra (West), Mumbai","addressRegion":"Maharashtra","postalCode":"400050","addressCountry":"IN"},
+"areaServed":["Bandra (West)","Khar (West)","Santacruz (West)","Pali Hill","Bandstand","Bandra (East)","BKC","Mahim","Juhu"],
+"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"650"},
+"hasCourse":{"@type":"Course","name":"One-to-One Digital Marketing Training for Business Owners","description":"One-to-one digital marketing classes for business owners in Bandra (West): Instagram, Facebook, Google Ads, Google Maps, SEO, WhatsApp marketing and AI tools, taught on the learner's own business.","provider":{"@type":"Organization","name":"Compufield"}}}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -500,7 +520,8 @@ footer .logo-chip{display:inline-flex;margin-bottom:12px}
   .rc{width:300px}
   .fcard{padding:24px}
   .mbar{display:flex}
-  .ctas .btn{flex:1}
+  .ctas{flex-direction:column;align-items:stretch}.ctas .btn{width:100%}
+  .cta-band .wrap{flex-direction:column;align-items:flex-start}.cta-band .btn{width:100%}
   .mq-t{font-size:18px}
 }
 </style>
@@ -605,7 +626,7 @@ footer .logo-chip{display:inline-flex;margin-bottom:12px}
 <section style="padding-bottom:40px">
   <div class="wrap">
     <div class="stats rv">
-      <div class="stat"><div class="n">1985</div><p>Training Mumbai since · now in Bandra (West)</p></div>
+      <div class="stat"><div class="n">41<em>+</em></div><p>Years training Mumbai, since 1985</p></div>
       <div class="stat"><div class="n"><span data-count="4.8" data-dec="1">4.8</span><em>★</em></div><p>Google rating</p></div>
       <div class="stat"><div class="n"><span data-count="650">650</span><em>+</em></div><p>Google reviews</p></div>
       <div class="stat"><div class="n">1<em>:</em>1</div><p>Trainer to learner. Always.</p></div>
@@ -988,7 +1009,9 @@ footer .logo-chip{display:inline-flex;margin-bottom:12px}
 
   /* header + mobile bar on scroll */
   var hdr=document.getElementById("hdr"), mbar=document.getElementById("mbar");
-  function onScroll(){var y=scrollY;hdr.classList.toggle("solid",y>40);mbar.classList.toggle("show",y>500);}
+  var formInView=false;
+  function onScroll(){var y=scrollY;hdr.classList.toggle("solid",y>40);mbar.classList.toggle("show",y>500&&!formInView);}
+  if("IntersectionObserver" in window){new IntersectionObserver(function(en){formInView=en[0].isIntersecting;onScroll();},{threshold:.15}).observe(document.getElementById("demoCard"));}
   addEventListener("scroll",onScroll,{passive:true});onScroll();
 
   /* ?focus=social for the social media ad group */
